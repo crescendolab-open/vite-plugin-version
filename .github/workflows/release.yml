@@ -35,13 +35,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Remove this if publishing to npm instead of GitHub Packages
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
-          EOF
-
       - name: Release
         id: changesets
         uses: changesets/action@v1
@@ -51,3 +44,4 @@ jobs:
           commit: "build: bump version"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
