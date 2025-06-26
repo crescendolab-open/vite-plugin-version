@@ -53,6 +53,15 @@ import VERSION from "virtual:version";
 console.log(VERSION); // "1.0.0"
 ```
 
+## Tips
+
+You can compare the versions between runtime and file to check for updates.
+
+## Demo
+
+- [Code](https://github.com/crescendolab-open/vite-plugin-version/tree/main/packages/demo)
+- [Live Demo](https://crescendolab-open.github.io/vite-plugin-version/)
+
 ## License
 
 Copyright © 2025-preset Crescendo Lab Inc.

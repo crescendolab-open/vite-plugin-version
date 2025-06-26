@@ -18,7 +18,14 @@ async function displayFileVersion() {
     throw new Error('Element with id "file-version" not found');
   }
 
-  const result = await fetch(urlJoin(import.meta.env.BASE_URL, "version"));
+  const result = await fetch(
+    `${urlJoin(import.meta.env.BASE_URL, "version")}?t=${Date.now()}`,
+    {
+      headers: {
+        "Cache-Control": "no-cache",
+      },
+    },
+  );
   const fileVersion = await result.text();
 
   fileVersionDiv.textContent = `File Version: ${fileVersion}`;
