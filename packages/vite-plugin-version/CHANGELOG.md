@@ -1,5 +1,11 @@
 # @crescendolab/vite-plugin-version
 
+## 0.0.5
+
+### Patch Changes
+
+- dda0560: update readme
+
 ## 0.0.4
 
 ### Patch Changes

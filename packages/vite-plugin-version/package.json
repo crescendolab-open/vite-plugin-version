@@ -1,6 +1,6 @@
 {
   "name": "@crescendolab/vite-plugin-version",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Vite plugin that exposes build version information both as a static file and as a virtual import.",
   "keywords": [
     "vite",
