@@ -143,3 +143,6 @@ dist
 !.env.*
 .env.local
 .env.*.local
+
+/packages/vite-plugin-version/README.md
+/packages/vite-plugin-version/LICENSE

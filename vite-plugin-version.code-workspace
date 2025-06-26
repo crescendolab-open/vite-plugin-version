@@ -9,12 +9,10 @@
   },
   "folders": [
     { "name": "root", "path": "." },
-    { "path": "packages/css-reset" },
     { "path": "packages/dts" },
     { "path": "packages/tsconfig" },
-    { "path": "packages/utils" },
-    { "path": "packages/template-vite-react-19" },
-    { "path": "packages/template-ts-lib" },
+    { "path": "packages/demo" },
+    { "path": "packages/vite-plugin-version" },
   ],
   "settings": {
     "[mdx]": {

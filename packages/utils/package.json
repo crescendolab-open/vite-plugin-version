@@ -1,7 +1,0 @@
-{
-  "name": "@repo/utils",
-  "version": "0.7.7",
-  "private": true,
-  "description": "Shared utilities",
-  "type": "module"
-}
