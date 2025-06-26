@@ -21,9 +21,7 @@ async function displayFileVersion() {
   const result = await fetch(
     `${urlJoin(import.meta.env.BASE_URL, "version")}?t=${Date.now()}`,
     {
-      headers: {
-        "Cache-Control": "no-cache",
-      },
+      cache: 'no-cache',
     },
   );
   const fileVersion = await result.text();
