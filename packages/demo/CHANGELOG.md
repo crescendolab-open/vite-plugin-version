@@ -1,5 +1,13 @@
 # @repo/demo
 
+## 0.0.3
+
+### Patch Changes
+
+- 5819af5: better demo
+- Updated dependencies [70b6d77]
+  - @crescendolab/vite-plugin-version@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
