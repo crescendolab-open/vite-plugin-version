@@ -1,41 +1,60 @@
-# 🌟 template-aio
+# Vite Plugin Version
 
-My all-in-one template for web development.
+A Vite plugin to inject version information into the build.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/VdustR/template-aio)
+## Installation
 
-<a href="https://studio.firebase.google.com/import?url=https%3A%2F%2Fgithub.com%2FVdustR%2Ftemplate-aio">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://cdn.firebasestudio.dev/btn/open_dark_32.svg">
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://cdn.firebasestudio.dev/btn/open_light_32.svg">
-    <img
-      height="32"
-      alt="Open in Firebase Studio"
-      src="https://cdn.firebasestudio.dev/btn/open_blue_32.svg">
-  </picture>
-</a>
+Install the plugin using the package manager:
 
-## 🎯 Release Library
+```bash
+pnpm add @crescendolab/vite-plugin-version
+```
 
-This repository uses **[changesets/action](https://github.com/changesets/action)**, a GitHub Action that automates release management by creating a pull request with version updates and changelog entries whenever changes are pushed to the `main` branch.
+## Usage
 
-To enable seamless releases, ensure GitHub Actions have sufficient permissions to write to and manage pull requests in your repository. Navigate to:
+Add the plugin to the `vite.config.ts` file:
 
-**Settings → Code and automation → Actions → General → Workflow permissions** and adjust the following:
+```ts
+// vite.config.ts
+import { versionPlugin } from "@crescendolab/vite-plugin-version";
+import { readPackage } from "read-pkg";
+import { defineConfig } from "vite";
 
-- ✅ Select **Read and write permissions**
-- ✅ Enable **Allow GitHub Actions to create and approve pull requests**
+export default defineConfig(async () => {
+  const pkg = await readPackage();
 
-## 🤝 Contributing
+  return {
+    plugins: [versionPlugin(pkg.version)],
+  };
+});
+```
 
-Contributions are welcome! Please read the [contributing guide](https://github.com/VdustR/template-aio/blob/main/CONTRIBUTING.md) for details.
+### Result
 
-## 📜 License
+The plugin generates a `version` file containing the application's version:
 
-[MIT](./LICENSE)
+```json
+{
+  "version": "1.0.0"
+}
+```
 
-Copyright (c) 2024-2025 ViPro <vdustr@gmail.com> (<http://vdustr.dev>)
+## Runtime Usage
+
+Access the version at runtime using the virtual module `virtual:version`:
+
+```ts
+// global.d.ts
+/// <reference types="@crescendolab/vite-plugin-version/version" />
+
+// app.ts
+import VERSION from "virtual:version";
+
+console.log(VERSION); // "1.0.0"
+```
+
+## License
+
+Copyright © 2025-preset Crescendo Lab Inc.
+
+Licensed under the [Apache License, Version 2.0](https://github.com/crescendolab-open/vite-plugin-version/blob/main/LICENSE)

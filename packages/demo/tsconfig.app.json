@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@utils/*": ["./src/utils/*"],
-      "@vdustr/template-aio-ts-lib": [
-        "../../packages/template-ts-lib/src/index.ts"
+      "@crescendolab/vite-plugin-version": [
+        "../../packages/vite-plugin-version/src/index.ts"
       ]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"

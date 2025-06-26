@@ -2,10 +2,9 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.node.json" },
-    { "path": "./packages/utils/tsconfig.app.json" },
-    { "path": "./packages/template-vite-react-19/tsconfig.node.json" },
-    { "path": "./packages/template-vite-react-19/tsconfig.app.json" },
-    { "path": "./packages/template-ts-lib/tsconfig.lib.json" },
-    { "path": "./packages/template-ts-lib/tsconfig.node.json" }
+    { "path": "./packages/demo/tsconfig.node.json" },
+    { "path": "./packages/demo/tsconfig.app.json" },
+    { "path": "./packages/vite-plugin-version/tsconfig.lib.json" },
+    { "path": "./packages/vite-plugin-version/tsconfig.node.json" }
   ]
 }
