@@ -1,6 +1,6 @@
 {
   "name": "@crescendolab/vite-plugin-version",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Vite plugin to inject version information into the build",
   "homepage": "https://github.com/crescendolab-open/vite-plugin-version",
   "repository": {

@@ -1,5 +1,11 @@
 # @crescendolab/vite-plugin-version
 
+## 0.0.3
+
+### Patch Changes
+
+- 70b6d77: include version.d.ts in package files
+
 ## 0.0.2
 
 ### Patch Changes
