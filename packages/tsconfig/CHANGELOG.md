@@ -1,0 +1,3 @@
+# @repo/tsconfig
+
+## 0.0.1
