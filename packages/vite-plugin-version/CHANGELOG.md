@@ -1,5 +1,11 @@
 # @crescendolab/vite-plugin-version
 
+## 0.0.4
+
+### Patch Changes
+
+- d7f0c61: add missing keywords to package.json
+
 ## 0.0.3
 
 ### Patch Changes
